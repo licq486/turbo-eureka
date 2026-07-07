@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <title>个人简历结合css版</title>
+    <style>
+        /* 全局分组选择器 分组嵌套 */
+        body,
+        h1,
+        h2,
+        h3,
+        p,
+        ul,
+        table {
+            margin: 0;
+            padding: 0;
+            font-family: "Microsoft YaHei", sans-serif;
+            /* Font字体 */
+        }
+
+        body {
+            background-color: #f0f4f8;
+            color: #333;
+            line-height: 1.8;
+            /* Text行高 */
+            padding-left: 160px;
+        }
+
+        /* Id选择器 顶部锚点 */
+        #top {
+            width: 100%;
+            height: 1px;
+        }
+
+        /* 侧边导航栏*/
+        .side-nav {
+            width: 140px;
+            height: 100vh;
+            background: #4472c4;
+            position: fixed;
+            /* Position定位 侧边固定 */
+            top: 0;
+            left: 0;
+            overflow: auto;
+            /* Overflow溢出：内容过长滚动 */
+            padding-top: 40px;
+        }
+
+        .side-nav a {
+            display: block;
+            /* Display显示：块级独占一行 */
+            color: #fff;
+            text-decoration: none;
+            /* link链接去除下划线 */
+            font-size: 16px;
+            margin: 10px 12px;
+            padding: 12px 16px;
+            border: 1px solid transparent;
+        }
+
+        /* link链接四种状态 */
+        .side-nav a:link {
+            border-color: transparent;
+        }
+
+        .side-nav a:visited {
+            color: #eee;
+        }
+
+        .side-nav a:hover {
+            border: 1px solid #fff;
+            outline: 2px solid #8cb3ff;
+            /* outline轮廓 */
+        }
+
+        .side-nav a:active {
+            background: #335ca0;
+        }
+
+        /* -----------------*/
+
+        .container {
+            width: 1000px;
+            margin: 40px auto 40px;
+            background: #fff;
+            padding: 40px;
+            border: 2px solid #4472c4;
+            overflow: visible;
+            /* Overflow溢出 */
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 32px;
+            margin-bottom: 30px;
+            color: #2c4b82;
+        }
+
+        h2 {
+            border-left: 6px solid #4472c4;
+            padding-left: 12px;
+            margin: 40px 0 16px;
+            font-size: 22px;
+        }
+
+        /* 基本信息区域 */
+        .info-wrap {
+            display: flex;
+            /* Display显示 */
+            justify-content: space-between;
+        }
+
+        .info-left {
+            width: 70%;
+        }
+
+        .info-right {
+            width: 25%;
+        }
+
+        .info-right img {
+            width: 180px;
+            height: 240px;
+            border: 3px solid #4472c4;
+        }
+
+        /* Table表格 */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 10px 0;
+        }
+
+        td {
+            border: 1px solid #ccc;
+            padding: 8px 12px;
+        }
+
+        /* List列表 */
+        ul {
+            list-style-type: square;
+            /* 列表样式 */
+            padding-left: 24px;
+        }
+
+        li {
+            margin: 8px 0;
+        }
+
+        .project-item {
+            border: 1px solid #d0d9e8;
+            padding: 16px;
+            margin: 12px 0;
+        }
+
+        .back-top-btn {
+            position: fixed;
+            right: 30px;
+            bottom: 30px;
+            width: 50px;
+            height: 50px;
+            background: #4472c4;
+            text-align: center;
+            line-height: 50px;
+            border-radius: 50%;
+        }
+
+        .back-top-btn a {
+            color: white;
+            font-size: 20px;
+            text-decoration: none;
+        }
+
+        .external-link {
+            margin-top: 10px;
+        }
+
+        .external-link a {
+            display: inline-block;
+            padding: 6px 12px;
+            background: #4472c4;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 顶部锚点标记 -->
+    <div id="top"></div>
+
+    <!-- 左侧固定侧边导航栏（锚点跳转） -->
+    <div class="side-nav">
+        <a href="#base">基本信息</a>
+        <a href="#edu">教育背景</a>
+        <a href="#project">项目经历</a>
+        <a href="#campus">校园经历</a>
+        <a href="#award">荣誉奖项</a>
+        <a href="#eval">自我评价</a>
+    </div>
+
+    <div class="container">
+        <h1>个人简历</h1>
+
+        <!-- 基本信息 锚点#base -->
+        <h2 id="base">基本信息</h2>
+        <div class="info-wrap">
+            <div class="info-left">
+                <table>
+                    <tr>
+                        <td>姓名</td>
+                        <td>小李</td>
+                        <td>出生年月</td>
+                        <td>2004.03</td>
+                    </tr>
+                    <tr>
+                        <td>民族</td>
+                        <td>土家族</td>
+                        <td>电子邮箱</td>
+                        <td>12345678921@qq.com</td>
+                    </tr>
+                    <tr>
+                        <td>性别</td>
+                        <td>女</td>
+                        <td>联系方式</td>
+                        <td>19123569876</td>
+                    </tr>
+                    <tr>
+                        <td>政治面貌</td>
+                        <td colspan="3">中共预备党员</td>
+                    </tr>
+                </table>
+                <!-- 外部跳转链接 target="_blank新窗口打开 -->
+                <div class="external-link">
+                    <a href="https://github.com/licq486/turbo-eureka" target="_blank">我的Github开源仓库</a>
+                </div>
+            </div>
+            <div class="info-right">
+                <img src="river.jpg" alt="证件照">
+            </div>
+        </div>
+
+        <!-- 2.教育背景 锚点#edu -->
+        <h2 id="edu">教育背景</h2>
+        <p><strong>2023.09-2027.06 &nbsp;&nbsp;贵州师范大学 &nbsp;&nbsp;计算机科学与技术（本科）</strong></p>
+        <p>综合成绩：分数84.42 &nbsp;&nbsp;专业排名：2/54</p>
+        <p>主修课程：机器学习、计算机网络与通信、操作系统、计算机组成基础、数据结构等</p>
+
+        <!-- 3.项目经历 锚点#project -->
+        <h2 id="project">项目经历</h2>
+        <div class="project-item">
+            <h3>低空智能决策与三维风险预警平台 | 计算机设计大赛 | 主要成员</h3>
+            <p><strong>技术栈：Java、Spring Boot、Vue3、MySQL、Redis</strong></p>
+            <ul>
+                <li>参与Spring Boot后端开发，实现接口、权限与规则引擎模块，解决业务接口统一管理、用户权限分级控制与规则自动化校验问题</li>
+                <li>参与MySQL数据表设计与查询优化，解决数据存储不规范、查询效率低的问题</li>
+                <li>协助前后端联调，通过Axios完成数据请求与渲染，解决前后端交互格式不匹配、接口调用异常导致页面无法正常展示的问题</li>
+                <li>协助功能测试与答辩材料整理，保障项目稳定运行与演示顺畅</li>
+            </ul>
+        </div>
+        <div class="project-item">
+            <h3>社区物业管理系统（Vue + Spring Boot）| 课程设计 | 负责人</h3>
+            <p><strong>技术栈：Java、Spring Boot、Vue.js、MySQL、Redis</strong></p>
+            <ul>
+                <li>独立完成用户登录、报修、缴费等后端接口开发，解决物业业务流程数字化问题</li>
+                <li>设计MySQL数据表结构并优化查询，解决数据存储混乱与查询效率低的问题</li>
+                <li>使用Redis实现会话缓存，减轻数据库访问压力，提升系统响应速度</li>
+                <li>完成前后端联调，保证数据交互稳定可靠，解决业务功能无法正常运行的问题</li>
+            </ul>
+        </div>
+
+        <!-- 4.校园经历 锚点#campus -->
+        <h2 id="campus">校园经历</h2>
+        <ul>
+            <li>
+                <strong>2025.09-至今 &nbsp;&nbsp;学生自主管理委员会 &nbsp;&nbsp;综合事务部部门负责人</strong>
+                <p>统筹部门流程优化，制定标准化表格，提升团队协作效率；负责跨部门沟通与任务落地，具备较强执行力与问题解决能力。</p>
+            </li>
+            <li>
+                <strong>2024.09-2025.09 &nbsp;&nbsp;学院艺术团 &nbsp;&nbsp;舞蹈队队长</strong>
+                <p>制定训练计划与节目编排，带领团队获校级奖项；具备团队管理、资源协调、目标达成能力。</p>
+            </li>
+            <li>
+                <strong>2023.09-2024.09 &nbsp;&nbsp;23计科班 &nbsp;&nbsp;副班长</strong>
+                <p>负责奖助学金数据收集、审核与上报；严谨处理数据与文档，确保流程规范、信息准确。</p>
+            </li>
+        </ul>
+
+        <!-- 5.荣誉奖项 锚点#award -->
+        <h2 id="award">荣誉奖项</h2>
+        <ul style="display: flex;flex-wrap: wrap;">
+            <li style="width:48%;">2026-5 第十九届计算机设计大赛省三等奖、校赛三等奖</li>
+            <li style="width:48%;">2025-12 国家励志奖学金</li>
+            <li style="width:48%;">2025-12 中共贵州师范大学委员会党校“优秀学员”</li>
+            <li style="width:48%;">2025-12 校三好学生、校甲等奖学金、校优秀学生干部</li>
+            <li style="width:48%;">2025-12 校第十二届寝室文化节 “三等奖”</li>
+            <li style="width:48%;">2025-9 校第十五届教学技能竞赛授课单项奖二等奖、教学设计一等奖、小组团队二等奖</li>
+            <li style="width:48%;">2025-5 校学生自主管理委员会“每月之星”</li>
+            <li style="width:48%;">2025-6 校第十三届啦啦操大赛三等奖</li>
+            <li style="width:48%;">2025-4 校2024年度“优秀共青团员”</li>
+            <li style="width:48%;">2024-12 校第十一届寝室文化节比赛二等奖</li>
+            <li style="width:48%;">2024-11 校优秀学生、校乙等奖学金、校优秀学生干部</li>
+            <li style="width:48%;">2024-6 校学生自主管理委员会“优秀学生干事”</li>
+            <li style="width:48%;">2023-12 校学生自主管理委员会“先进个人”</li>
+        </ul>
+
+        <!-- 6.自我评价 锚点#eval -->
+        <h2 id="eval">自我评价</h2>
+    </div>
+
+    <!-- 返回顶部锚点按钮 -->
+    <div class="back-top-btn">
+        <a href="#top">↑</a>
+    </div>
+</body>
+
+</html>

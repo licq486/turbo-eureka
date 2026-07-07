@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>cssBox</title>
+
+    <style>
+        div.box {
+            background-color: greenyellow;
+            /*背景颜色*/
+            width: 200px;
+            height: 200px;
+            border: 25px solid green;
+            /*边框*/
+            border-style: double;
+            /*边框样式 双线边框*/
+            padding: 25px;
+            /*内边距*/
+            margin: 25px;
+            /*外边距*/
+        }
+
+        div.ex {
+            background-color: rgb(157, 200, 224);
+            width: 220px;
+            height: 220px;
+            border: 5px solid gray;
+            border-style: groove;
+            /*边框样式 凹槽边框*/
+            padding: 10px;
+            margin: 0;
+        }
+
+        div.ex2 {
+            background-color: rgba(232, 156, 236, 0.996);
+            width: 50px;
+            height: 50px;
+            border: 10px solid rgb(226, 67, 192);
+            border-style: dashed;
+            /*边框样式 虚线边框*/
+            padding: 10px;
+            margin: 10px;
+        }
+
+        p.ridge {
+            background-color: rgb(83, 187, 228);
+            width: 50px;
+            height: 50px;
+            border: 10px solid rgb(52, 71, 213);
+            border-style: ridge;
+            /*边框样式 三维脊状边框*/
+            padding: 10px 20px;
+            margin: 10px 20px;
+        }
+
+        p.inset {
+            background-color: rgb(229, 235, 48);
+            width: 50px;
+            height: 50px;
+            border: 10px solid rgb(102, 226, 36);
+            border-style: inset;
+            /*边框样式 三维嵌入边框*/
+            padding: 10px;
+            margin: 10px;
+        }
+
+        p.outset {
+            background-color: rgb(64, 192, 218);
+            width: 50px;
+            height: 50px;
+            border: 10px solid rgb(97, 225, 199);
+            border-style: outset;
+            /*边框样式 三维凸出边框*/
+            padding: 10px;
+            margin: 10px;
+        }
+
+        p.dotted {
+            background-color: rgb(231, 136, 35);
+            width: 50px;
+            height: 50px;
+            border: 10px solid rgb(228, 222, 29);
+            border-style: dotted;
+            /*边框样式 点线边框*/
+            padding: 10px;
+            margin: 10px;
+        }
+
+        p.hidden {
+            background-color: rgb(231, 136, 35);
+            width: 50px;
+            height: 50px;
+            border: 10px solid rgb(228, 222, 29);
+            border-style: hidden;
+            /*边框样式 隐藏边框*/
+            padding: 10px;
+            margin: 10px;
+        }
+
+        p.mix {
+            background-color: rgb(231, 136, 35);
+            width: 50px;
+            height: 50px;
+            border-top: 10px solid rgb(228, 222, 29);
+            border-right: 10px solid rgb(85, 45, 171);
+            border-bottom: 10px solid rgb(131, 191, 11);
+            border-left: 10px solid rgb(29, 225, 228);
+            border-style: dotted groove inset outset;
+            /*边框样式 混合边框 点线、沟槽、嵌入、凸出*/
+            padding: 10px;
+            margin: 10px;
+        }
+
+        /*分组选择器*/
+        h1,
+        h2,
+        h3 {
+            line-height: 1.5;
+            color: rgb(197, 85, 15);
+        }
+    </style>
+
+</head>
+
+<body>
+    <h1>盒子模型演示</h1>
+    <h2>盒子模型组成</h2>
+
+    <p>CSS盒模型本质上是一个盒子,封装周围的HTML元素,它包括:边距,边框,填充,和实际内容.</p>
+    <div class="box">这里是盒子内的实际内容。有 25px 内间距,25px 外间距、25px 绿色边框</div>
+
+    <div class="ex">
+        <p>
+            这里是另一个盒子,使用了不同的样式。这个盒子的总元素宽度为250px
+            元素的总宽度 = 宽度+左填充+右填充+左边框+右边框+左边距+右边距
+            元素的总高度 = 高度+顶部填充+底部填充+上边框+下边框+上边距+下边距
+        </p>
+    </div>
+
+    <h3>边框</h3>
+
+    <div class="ex2">虚线边框</div>
+
+    <p class="ridge">三维脊状边框</p>
+    <p class="inset">三维嵌入边框</p>
+    <p class="outset">三维凸出边框</p>
+    <p class="dotted">点线边框</p>
+    <p class="hidden">隐藏边框</p>
+    <p class="mix">混合边框</p>
+</body>
+
+</html>
