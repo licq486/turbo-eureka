@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>id和class选择器</title>
+
+    <style>
+        /* id选择器 */
+        #para1 {
+            text-align: center;
+            color: blue;
+        }
+
+        /* class选择器 */
+        .center {
+            text-align: center;
+        }
+
+        p.center {
+            text-align: center;
+            color: forestgreen;
+        }
+
+        .color {
+            color: crimson;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="part1" style="background-color: rgb(237, 236, 226);height: 200px;width: 300px;">
+        <!--id属性不要以数字开头，数字开头的ID在 Mozilla/Firefox 浏览器中不起作用。-->
+        <p id="para1">今天是2026年7月6日</p>
+        <p>没有写明id选择器的不会显示设置好的样式</p>
+    </div>
+
+    <div id="part2" style="background-color: honeydew;height: 200px;width: 300px;">
+        <!--class选择器-->
+        <h1 class="center color">此时的时间</h1>
+        <p class="center">现在的时间是下午两点二十五分</p>
+    </div>
+</body>
+
+</html>

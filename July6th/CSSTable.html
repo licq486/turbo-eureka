@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>CSS Table Demo</title>
+    <style>
+        /* 设置表格标题caption显示在表格底部 */
+        caption {
+            caption-side: bottom;
+        }
+
+        /* ID选择器，匹配id="customers"的table表格 */
+        #customers {
+            font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+            width: 100%;
+            border-collapse: collapse;
+            /* 合并单元格边框，消除单元格之间默认的缝隙，单线边框效果 */
+        }
+
+        /* ID选择器，匹配id="customers"的table表格下的单元格td和表头th元素 */
+        #customers td,
+        #customers th {
+            font-size: 1em;
+            border: 1px solid #98bf21;
+            /* 单元格边框：1像素实线，橄榄绿色 */
+            padding: 3px 7px 2px 7px;
+            /* 内边距：上3px、右7px、下2px、左7px，文字和边框拉开距离 */
+        }
+
+        /* ID选择器，匹配id="customers"的table表格下的th元素 */
+        #customers th {
+            font-size: 1.1em;
+            text-align: left;
+            /* 表头文字左对齐，默认居中 */
+            padding-top: 5px;
+            padding-bottom: 4px;
+            /* 单独设置表头上下内边距 */
+            background-color: #A7C942;
+            color: #ffffff;
+        }
+
+        /* ID选择器，匹配id="customers"的table表格下的tr元素，class="alt"的tr元素 */
+        #customers tr.alt td {
+            color: #000000;
+            background-color: #EAF2D3;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <!-- 创建一个表格,id="customers" -->
+    <table id="customers">
+        <!-- 设置表格标题caption显示在表格底部 -->
+        <caption>Table 1.1 customers</caption>
+
+        <!-- 创建表格的表头tr元素 -->
+        <tr>
+            <th>Company</th>
+            <th>Contact</th>
+            <th>Country</th>
+        </tr>
+
+        <!-- 创建表格的表体tr元素 -->
+        <tr>
+            <td>Alfreds Futterkiste</td>
+            <td>Maria Anders</td>
+            <td>Germany</td>
+        </tr>
+
+        <!-- class="alt"标记隔行，CSS自动给该行设置浅色背景实现斑马效果 -->
+        <tr class="alt">
+            <td>Berglunds snabbköp</td>
+            <td>Christina Berglund</td>
+            <td>Sweden</td>
+        </tr>
+
+        <!-- 创建表格的表体tr元素 -->
+        <tr>
+            <td>Centro comercial Moctezuma</td>
+            <td>Francisco Chang</td>
+            <td>Mexico</td>
+        </tr>
+
+        <tr class="alt">
+            <td>Ernst Handel</td>
+            <td>Roland Mendel</td>
+            <td>Austria</td>
+        </tr>
+
+        <tr>
+            <td>Island Trading</td>
+            <td>Helen Bennett</td>
+            <td>UK</td>
+        </tr>
+
+        <tr class="alt">
+            <td>Königlich Essen</td>
+            <td>Philip Cramer</td>
+            <td>Germany</td>
+        </tr>
+
+        <tr>
+            <td>Laughing Bacchus Winecellars</td>
+            <td>Yoshi Tannamuri</td>
+            <td>Canada</td>
+        </tr>
+
+        <tr class="alt">
+            <td>Magazzini Alimentari Riuniti</td>
+            <td>Giovanni Rovelli</td>
+            <td>Italy</td>
+        </tr>
+
+        <tr>
+            <td>North/South</td>
+            <td>Simon Crowther</td>
+            <td>UK</td>
+        </tr>
+
+        <tr class="alt">
+            <td>Paris spécialités</td>
+            <td>Marie Bertrand</td>
+            <td>France</td>
+        </tr>
+
+    </table>
+
+</body>
+
+</html>

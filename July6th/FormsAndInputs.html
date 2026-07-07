@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>表单和iframe</title>
+</head>
+
+<body>
+    <h2>表单</h2>
+
+    <!--定义一个表单，提交到"/"，使用post方法-->
+    <form action="/" method="post">
+        <!--用户名输入框-->
+        <label for="name">用户名:</label>
+        <input type="text" id="name" name="name" required>
+        <br>
+
+        <!--密码输入框-->
+        <label for="passwprd">密码:</label>
+        <input type="password" id="password" name="password" required>
+        <br>
+
+        <!--性别选择-->
+        <label>性别:</label>
+        <input type="radio" id="male" name="gender" value="male" checked>
+        <label for="male">男</label>
+        <input type="radio" id="male" name="gender" value="female" checked>
+        <label for="female">女</label>
+        <br>
+
+        <!--订阅选择-->
+        <input type="checkbox" id="subscribe" name="subscribe" checked>
+        <label for="subscribe">订阅推送信息</label>
+        <br>
+
+        <label for="country">国家:</label>
+        <!--下拉框-->
+        <select name="country" id="country">
+            <option value="cn">CN</option>
+            <option value="usa">USA</option>
+            <option value="uk">UK</option>
+        </select>
+        <br>
+
+        <!--提交按钮-->
+        <input type="submit" value="提交">
+
+    </form>
+
+    <!--iframe（定义一个内联的iframe）指向不同网页-->
+    <iframe src="demo_iframe.html" name="iframe_a" width="1200" height="600"></iframe>
+    <p>
+        <a href="https://www.baidu.com" target="iframe_a" rel="noopener">百度一下</a>
+    </p>
+
+</body>
+
+</html>
