@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>冒泡排序</title>
+</head>
+
+<body>
+    <h1>冒泡排序</h1>
+    <p id="demo"></p>
+
+
+
+    <script>
+        /*
+            需求：
+            1. 无序数组 let data = [34, 12, 56, 7, 29, 41];
+            2. 双层 for 循环冒泡排序，从小到大排列
+            3. 每一轮排序后输出当前数组状态
+            4. 排序完成后输出最终有序数组，并找出数组总和、最大值
+        */
+
+        let data = [34, 12, 56, 7, 29, 41];
+        let len = data.length;
+        let res = "";
+
+        for (let i = 0; i < len - 1; i++) {
+            for (let j = 0; j < len - 1 - i; j++) {
+                if (data[j] > data[j + 1]) {
+                    let temp = data[j];
+                    data[j] = data[j + 1];
+                    data[j + 1] = temp;
+
+                }
+            }
+            res += `第${i + 1}轮排序后的数组：${data}<br>`;
+        }
+
+        let sum = 0;
+        let max = data[0];
+        for (let k = 0; k < len; k++) {
+            sum += data[k];
+            if (data[k] > max) {
+                max = data[k];
+            }
+        }
+
+        res += `<hr>排序完成有序数组：${data}<br>`;
+        res += `数组总和：${sum}<br>`;
+        res += `数组最大值：${max}`;
+
+        document.getElementById("demo").innerHTML = res;
+
+
+    </script>
+
+</body>
+
+</html>

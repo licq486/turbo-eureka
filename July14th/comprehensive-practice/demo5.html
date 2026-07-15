@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>学生成绩筛选器</title>
+</head>
+
+<body>
+    <h1>学生成绩筛选器</h1>
+    <p id="demo"></p>
+
+
+    <script>
+        /*
+        需求：
+let students = [
+    { name: "小明", score: 86 },
+    { name: "小红", score: 59 },
+    { name: "小李", score: 95 },
+    { name: "小张", score: 72 },
+    { name: "小王", score: 48 }
+]
+1.	for 循环遍历数组对象
+2.	if 判断分数，筛选出及格 (≥60) 学生单独输出
+3.	统计及格人数、不及格人数
+4.	switch 给每位学生标注评级
+        */
+
+        let students = [
+            { name: "小明", score: "86" },
+            { name: "小红", score: "59" },
+            { name: "小李", score: "95" },
+            { name: "小张", score: "72" },
+            { name: "小王", score: "48" },
+        ];
+
+        let passCount = 0;//及格人数
+        let failCount = 0;//不及格人数
+        let passStr = "";//存及格学生信息
+        let allInfo = "";//全部学生带评级信息
+        for (let i = 0; i < students.length; i++) {
+            let stu = students[i];
+            let level;
+
+            switch (true) {
+                case stu.score >= 90:
+                    level = "优秀";
+                    break;
+                case stu.score >= 80:
+                    level = "良好";
+                    break;
+                case stu.score >= 70:
+                    level = "中等";
+                    break;
+                case stu.score >= 60:
+                    level = "及格";
+                    break;
+                default:
+                    level = "不及格";
+            }
+
+            allInfo += `姓名：${stu.name}，分数：${stu.score}，评级：${level}<br>`;
+
+            // 判断及格，单独收集及格学生
+            if (stu.score >= 60) {
+                passCount++;
+                passStr += `姓名：${stu.name}，分数：${stu.score}，评级：${level}<br>`;
+            } else {
+                failCount++;
+            }
+        }
+
+        // 页面拼接输出
+        let html = `
+        <h3>全部学生信息：</h3>${allInfo}<hr>
+        <h3>及格学生名单：</h3>${passStr || "无及格学生"}<hr>
+        及格总人数：${passCount}<br>
+        不及格总人数：${failCount}
+        `;
+
+        document.getElementById("demo").innerHTML = html;
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>数组求和&平均值</title>
+</head>
+
+<body>
+    <h1>数组求和&平均值</h1>
+    <p id="demo"></p>
+    <script>
+        /*
+        需求：
+给定数组 let nums = [90, 85, 78, 92, 66, 88];
+使用 for 循环累加算出总和
+计算平均分（保留 1 位小数）
+switch 判断平均分档位：
+≥90：优秀
+≥80：良好
+≥70：中等
+≥60：及格
+＜60：不及格
+*/
+
+
+        let nums = [90, 85, 78, 92, 66, 88];   /*数组*/
+        let sum = 0;  /*求和*/
+        let level;    /*等级*/
+
+        /*求总和*/
+        for (let i = 0; i < nums.length; i++) {
+            sum += nums[i];
+        }
+
+
+        let avg = sum / nums.length;  /*平均分*/
+        let avgFixed = avg.toFixed(1); /*保留一位小数*/
+
+        switch (true) {
+            case avg >= 90: level = "优秀";
+                break;
+            case avg >= 80: level = "良好";
+                break;
+            case avg >= 70: level = "中等";
+                break;
+            case avg >= 60: level = "及格";
+                break;
+            default: level = "不及格";
+        }
+
+        /*字面量拼接字符串*/
+        let res = `总和: ${sum}<br>
+        平均分: ${avgFixed}<br>
+        平均分档位: ${level}`;
+
+        document.getElementById("demo").innerHTML = res;
+
+    </script>
+</body>
+
+</html>

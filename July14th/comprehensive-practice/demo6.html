@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>continue</title>
+</head>
+
+<body>
+    <h1>continue跳过指定数字</h1>
+    <p id="demo"></p>
+
+    <script>
+
+
+        /*
+        continue 跳过指定数字
+  需求：
+1.	循环输出 1~20
+2.	使用 continue 跳过所有 7 的倍数（7、14…）
+3.	页面打印最终输出序列
+        */
+
+        let str = "";
+        for (let i = 1; i <= 20; i++) {
+            if (i % 7 === 0) {
+                continue;
+            }
+            str += i + "  ";
+        }
+        document.getElementById("demo").innerHTML = str;
+    </script>
+
+</body>
+
+</html>

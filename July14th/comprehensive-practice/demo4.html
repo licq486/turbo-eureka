@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>直角三角形</title>
+    <style>
+        pre {
+            font-size: 18px;
+            line-height: 1.2;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>直角三角形</h1>
+    <pre id="demo"></pre>
+
+    <script>
+        /*
+                需求：
+        1.	输入行数 n=8，双层 for 循环打印星号直角三角形
+        plaintext
+        *
+        **
+        ***
+        ****
+        *****
+        ******
+        *******
+        ********
+        2.	拓展：用 if+continue 实现倒三角
+        */
+
+        let n = 8;
+        let str = "";
+        for (let i = 0; i <= n; i++) {
+            for (let j = 1; j <= i; j++) {
+                str += "*";
+            }
+            str += "\n";
+        }
+
+        document.getElementById("demo").innerText = str;
+    </script>
+
+</body>
+
+</html>

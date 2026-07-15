@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<head>
+    <meta charset="UTF-8">
+    <title>倒三角 if+continue</title>
+    <style>
+        pre {
+            font-size: 18px;
+            line-height: 1.2;
+        }
+    </style>
+</head>
+
+<body>
+    <p id="box2"></p>
+    <script>
+        let n = 8;
+        let s = "";
+        for (let i = 1; i <= n; i++) {
+            // 每行允许打印的星星个数
+            let count = n - i + 1;
+            for (let j = 1; j <= n; j++) {
+                // j超过数量就跳过，不打印*
+                if (j > count) {
+                    continue;
+                }
+                s += "*";
+            }
+            s += "\n";
+        }
+        document.getElementById("box2").innerText = s;
+    </script>
+</body>
+
+</html>
