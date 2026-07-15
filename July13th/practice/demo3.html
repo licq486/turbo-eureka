@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>隐式类型转换</title>
+</head>
+
+<body>
+    <h1>隐式类型转换</h1>
+    <p id="demo"></p>
+    <script>
+        let s = "";
+
+        let r1 = 10 + "20";
+        console.log('10+"20"=', r1);
+        s += `10+"20"=${r1}<br>`;
+
+        let r2 = 10 - "20";
+        console.log('10-"20"=', r2);
+        s += `10-"20"=${r2}<br>`;
+
+        let r3 = "10" * 2;
+        console.log('"10"*2=', r3);
+        s += `"10"*2=${r3}<br>`;
+
+        let r4 = true + 1;
+        console.log('true + 1 =', r4);
+        s += `true + 1 = ${r4}<br>`;
+
+        let r5 = false + "5";
+        console.log('false + "5" =', r5);
+        s += `false + "5" = ${r5}<br>`;
+
+        let r6 = null + 8;
+        console.log('null + 8 =', r6);
+        s += `null + 8 = ${r6}<br>`;
+
+        let r7 = undefined + 8;
+        console.log('undefined + 8 =', r7);
+        s += `undefined + 8 = ${r7}<br>`;
+
+        document.getElementById("demo").innerHTML = s;
+    </script>
+</body>
+
+</html>

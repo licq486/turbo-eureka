@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>null&undefined的区分</title>
+</head>
+
+<body>
+    <h1>null & undefined区分</h1>
+    <p id="demo"></p>
+
+    <script>
+        var a;
+        var b = null;
+
+
+        let str = "";
+        str += "变量a的值：" + a + " , a的类型：" + typeof (a) + "<br>";
+        str += "变量a的值：" + a + " , a的类型：" + typeof (a) + "<br>";
+
+        str += "a == b 的结果：" + (a == b) + "<br>";
+        str += "a === b 的结果：" + (a === b);
+
+        document.getElementById("demo").innerHTML = str;
+
+    </script>
+</body>
+
+</html>

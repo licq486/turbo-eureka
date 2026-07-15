@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>变量声明与类型</title>
+</head>
+
+<body>
+    <h1>变量声明与类型判断</h1>
+    <p>题目:var / let / const 变量类型检测 + const 修改报错测试</p>
+    <p id="demo"></p>
+
+
+    <script>
+        const username = "lichunqing";
+        var age = 22;
+        let isStudent = true;
+
+        document.getElementById("demo").innerHTML =
+            "username的数据类型:" + typeof username + "<br>" +
+            "age的数据类型:" + typeof age + "<br>" +
+            "isStudent的数据类型:" + typeof isStudent;
+
+        username = "lcq";/*const声明的变量不可更改，控制台会报错*/
+    </script>
+</body>
+
+</html>

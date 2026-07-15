@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>函数</title>
+
+
+</head>
+
+<body>
+    <p>调用带参数的函数</p>
+
+    <button onclick="myfunction('Harry Potter','Wizard')">点击查看结果</button>
+    <button onclick="myfunction('Bob','Builder')">第二个按钮</button>
+    <hr>
+
+    <p>带有返回值的函数</p>
+    <p id="demo"></p>
+    <hr>
+
+    <p>字符串的索引</p>
+    <p id="demo1"></p>
+    <hr>
+
+    <p>转义字符串</p>
+    <p id="demo2"></p>
+    <hr>
+
+    <p>统计字符串长度</p>
+    <p id="demo3"></p>
+    <hr>
+
+    <p>模板字面量使用``来定义一个字符串</p>
+    <p id="demo4"></p>
+    <hr>
+
+    <p>比较运算符</p>
+    <p id="demo5"></p>
+    <hr>
+
+    <p>条件运算符</p>
+    <p>点击按钮检测年龄</p>
+    年龄:<input id="age" value="18">
+    <p>是否达到投票年龄？</p>
+    <button onclick="myfunction2()">点击查看</button>
+    <p id="demo6"></p>
+    <hr>
+
+    <p>随机链接</p>
+    <p id="demo7"></p>
+    <hr>
+
+    <p>switch语句</p>
+    <p>点击按钮查看今天星期几</p>
+    <button onclick="myfunction3()">点击查看今天是周几</button>
+    <p id="demo8"></p>
+    <hr>
+
+    <p>for/in循环遍历对象的属性</p>
+    <button onclick="myfunction4()">点击按钮循环遍历"person"的属性</button>
+    <p id="demo9"></p>
+    <hr>
+
+    <script>
+        /*调用带参数的函数*/
+        function myfunction(name, job) {
+            alert("welcome  " + name + " , the  " + job)
+        }
+
+        /*带有返回值的函数*/
+        function myfunction1(a, b) {
+            return a * b;
+        }
+        document.getElementById("demo").innerHTML = myfunction1(4, 3);
+
+        /*字符串的索引*/
+        const name = "Visual";
+        let letter = name[3];
+        document.getElementById("demo1").innerHTML = letter;
+
+        /*转义字符串*/
+        var x = 'It\'s alright';
+        var y = "He is called \"Jonny\"";
+        document.getElementById("demo2").innerHTML = x + "<br>" + y;
+
+        /*统计字符串长度*/
+        var txt = "ZXCVBNMLKJHGFDSAQWERTYUIOP";
+        var sln = txt.length;
+        document.getElementById("demo3").innerHTML = sln;
+
+        /*模板字面量使用``来定义一个字符串*/
+        const multiLineText =
+            `This is 
+            multi-line 
+            text
+        `;
+        document.getElementById("demo4").innerHTML = multiLineText;
+
+
+        /*比较运算符*/
+        var x = 5;
+        document.getElementById("demo5").innerHTML = x === "5";
+
+
+        /*条件运算符*/
+        function myfunction2() {
+            var age, voteable;
+            age = document.getElementById("age").value;
+            voteable = (age < 18) ? "年龄太小" : "年龄已达到";
+            document.getElementById("demo6").innerHTML = voteable;
+        }
+
+        /*条件语句*/
+        var d = new Date();
+        var time = d.getHours();
+        if (time < 10) {
+            document.write("<b>早上好</b><hr>");
+        }
+        else if (time >= 10 && time < 20) {
+            document.write("<b>今天好</b><hr>");
+        }
+        else {
+            document.write("<b>晚上好</b><hr>");
+        }
+
+        /*随机链接*/
+        var r = Math.random();
+        var m = document.getElementById("demo7");
+        if (r > 0.5) {
+            m.innerHTML = "<a href='https://www.runoob.com'>访问菜鸟教程</a>";
+        }
+        else {
+            m.innerHTML = "<a href='https://www.baidu.com/'>访问百度</a>";
+        }
+
+        /*switch语句*/
+        function myfunction3() {
+            var x;
+            var d = new Date().getDay();
+
+            switch (d) {
+                case 0: x = "今天是星期日";
+                    break;
+                case 1: x = "今天是星期一";
+                    break;
+                case 2: x = "今天是星期二";
+                    break;
+                case 3: x = "今天是星期三";
+                    break;
+                case 4: x = "今天是星期四";
+                    break;
+                case 5: x = "今天是星期五";
+                    break;
+                case 6: x = "今天是星期六";
+                    break;
+                default: x = "期待周末";
+            }
+            document.getElementById("demo8").innerHTML = x;
+        }
+
+        /*for循环*/
+        cars = ["BMW", "Volvo", "Saab", "Fard", "Xiaomi"];
+        for (i = 0; i < cars.length; i++) {
+            document.write(cars[i] + "<br>");
+        }
+
+        /*for/in循环遍历对象的属性*/
+        function myfunction4() {
+            var x;
+            var txt = "";
+            var person = {
+                fname: "Bill",
+                lname: "Gates",
+                age: "20"
+            };
+            for (x in person) {
+                txt = txt + person[x];
+            }
+            document.getElementById("demo9").innerHTML = txt;
+        }
+
+
+
+    </script>
+</body>
+
+</html>

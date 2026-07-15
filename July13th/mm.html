@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>var变量</title>
+</head>
+
+<body>
+    <p>假设y=6，x=y*6，计算并显示结果</p>
+    <button onclick="myfunction()">点击查看结果</button>
+    <p id="demo"></p>
+    <script>
+        function myfunction() {
+            var y = 6;
+            var x = y * 6;
+            var demoP = document.getElementById("demo");
+            demoP.innerHTML = "x=" + x
+        }
+
+
+    </script>
+</body>
+
+</html>
